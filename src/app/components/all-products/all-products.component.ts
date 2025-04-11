@@ -9,11 +9,11 @@ import { rmrProduct } from '../../models/product.model';
   styleUrl: './all-products.component.scss'
 })
 export class AllProductsComponent implements OnInit {
-  products: rmrProduct[] = [];
+  rmrProducts: rmrProduct[] = [];
 
-  constructor(private productService: rmrProductService) { }
+  constructor(private rmrProductService: rmrProductService) { }
   ngOnInit(): void {
-    this.products = this.productService.getrmrProducts();
+    this.rmrProducts = this.rmrProductService.getrmrProducts();
   }
 
 }

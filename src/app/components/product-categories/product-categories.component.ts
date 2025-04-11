@@ -10,8 +10,8 @@ import { rmrProduct } from '../../models/product.model';
   styleUrl: './product-categories.component.scss'
 })
 export class ProductCategoriesComponent implements OnInit {
-  categoryName: string = '';
-  products: rmrProduct[] = [];
+  rmrCategoryName: string = '';
+  rmrProducts: rmrProduct[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -22,8 +22,8 @@ export class ProductCategoriesComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       const categoryParam = params.get('category');
       if (categoryParam) {
-        this.categoryName = categoryParam;
-        this.products = this.productService.getrmrProductsByCategory(this.categoryName);
+        this.rmrCategoryName = categoryParam;
+        this.rmrProducts = this.productService.getrmrProductsByCategory(this.rmrCategoryName);
       }
     });
   }

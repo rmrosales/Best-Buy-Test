@@ -9,11 +9,11 @@ import { rmrProductService } from '../../services/product.service';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
-  categories: rmrCategories[] = [];
+  rmrCategories: rmrCategories[] = [];
 
-  constructor(private productService: rmrProductService) { }
+  constructor(private rmrProductService: rmrProductService) { }
   ngOnInit(): void {
-    this.categories = this.productService.getrmrCategories();
+    this.rmrCategories = this.rmrProductService.getrmrCategories();
     
   }
 

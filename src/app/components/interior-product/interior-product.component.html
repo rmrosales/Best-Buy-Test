@@ -4,17 +4,17 @@
         <div class="p-3 card border bg-light">
           <div class="card-header text-center">
             <!-- Product Image -->
-            <img class="img-fluid mb-4" [src]="'images/' + (product?.rmrPhoto || 'default-image.jpg')" [alt]="product?.rmrProductName">
+            <img class="img-fluid mb-4" [src]="'images/' + (rmrProduct?.rmrPhoto || 'default-image.jpg')" [alt]="rmrProduct?.rmrProductName">
             <!-- Product Name -->
-            <h4 class="my-0 font-weight-normal">{{ product?.rmrProductName }}</h4>
+            <h4 class="my-0 font-weight-normal">{{ rmrProduct?.rmrProductName }}</h4>
           </div>
           <div class="card-body">
             <ul class="list-unstyled mt-3 mb-4">
               <!-- Product Description -->
-              <li>{{ product?.rmrDescription }}</li>
+              <li>{{ rmrProduct?.rmrDescription }}</li>
               <!-- Product Price -->
               <li>
-                <h1 class="card-title pricing-card-title">${{ product?.rmrPrice }}</h1>
+                <h1 class="card-title pricing-card-title">${{ rmrProduct?.rmrPrice }}</h1>
               </li>
             </ul>
           </div>
