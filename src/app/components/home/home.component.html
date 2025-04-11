@@ -1,0 +1,27 @@
+<div class="container-lg px-4" style="margin-top:100px;">
+  <div class="row ">
+
+    <div class="col-md-4  box-shadow " *ngFor="let category of categories">
+      <div class="p-3 card border bg-light">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">{{ category.rmrCategoryType }}</h4>
+        </div>
+        <div class="card-body">
+          <img class="img-fluid mb-4" [src]="'images/' + category.rmrCategoryPhoto" [alt]="category.rmrCategoryType">
+          <!-- <a [routerLink]="['/category', category.rmrCategoryType]" class="btn btn-lg btn-block btn-outline-primary">
+            View
+          </a>
+          <hr> -->
+          <button 
+  type="button"
+  class="btn btn-lg btn-block btn-outline-primary"
+  [routerLink]="['/category', category.rmrCategoryType]">
+  View
+</button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

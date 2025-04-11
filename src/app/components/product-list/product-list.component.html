@@ -1,0 +1,10 @@
+<h2>Product List</h2>
+<div class="product-grid">
+    <div *ngFor="let product of products" class="product-card">
+        <img [src]="'images/' + product.rmrPhoto" alt="{{ product.rmrPhoto }}">
+        <h3>{{ product.rmrProductName }}</h3>
+        <p>{{ product.rmrDescription }}</p>
+        <p><strong>Price:</strong> ${{ product.rmrPrice }}</p>
+        <p><strong>Category:</strong> {{ product.rmrCategory }}</p>
+    </div>
+</div>
