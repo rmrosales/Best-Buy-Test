@@ -15,7 +15,7 @@ export class ProductCategoriesComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private productService: rmrProductService
+    private rmrProductServices: rmrProductService
   ) {}
 
   ngOnInit(): void {
@@ -23,7 +23,7 @@ export class ProductCategoriesComponent implements OnInit {
       const categoryParam = params.get('category');
       if (categoryParam) {
         this.rmrCategoryName = categoryParam;
-        this.rmrProducts = this.productService.getrmrProductsByCategory(this.rmrCategoryName);
+        this.rmrProducts = this.rmrProductServices.getrmrProductsByCategory(this.rmrCategoryName);
       }
     });
   }

@@ -15,7 +15,7 @@ export class InteriorProductComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private productService: rmrProductService
+    private rmrProductService: rmrProductService
   ) { }
 
   ngOnInit(): void {
@@ -24,7 +24,7 @@ export class InteriorProductComponent implements OnInit {
       this.rmrProductId = params.get('id')!;  // 'id' matches the route parameter
 
       // Fetch the product details using the productId
-      this.rmrProduct = this.productService.getrmrProductById(Number(this.rmrProductId)); // Assuming you have a method to fetch the product by id
+      this.rmrProduct = this.rmrProductService.getrmrProductById(Number(this.rmrProductId)); // Assuming you have a method to fetch the product by id
     });
   }
 
