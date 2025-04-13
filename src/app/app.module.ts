@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductListComponent } from './components/product-list/product-list.component';
 import { HomeComponent } from './components/home/home.component';
 import { AllProductsComponent } from './components/all-products/all-products.component';
 import { ProductCategoriesComponent } from './components/product-categories/product-categories.component';
@@ -15,7 +14,6 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent,
     HomeComponent,
     AllProductsComponent,
     ProductCategoriesComponent,
